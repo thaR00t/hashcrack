@@ -23,7 +23,7 @@ SHA1 Hash
 
 
 ```
-python hashcrack.py -w <wordlist> -m sha1 <hash
+python hashcrack.py -w <wordlist> -m sha1 <hash>
 ```
 
 SHA224 Hash
@@ -36,7 +36,7 @@ SHA256
 
 
 ```
-python hashcrack.py -w <wordlist> -m sha256 <hash
+python hashcrack.py -w <wordlist> -m sha256 <hash>
 ```
 
 SHA384
