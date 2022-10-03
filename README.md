@@ -45,7 +45,7 @@ SHA384
 python hashcrack.py -w <wordlist> -m sha384 <hash>
 ```
 
-SHA256
+SHA512
 
 ```
 python hashcrack.py -w <wordlist> -m sha512 <hash>
