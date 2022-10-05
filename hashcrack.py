@@ -1,4 +1,5 @@
 import hashlib
+import binascii
 import argparse
 from rich import print
 from datetime import datetime
@@ -63,24 +64,32 @@ try:
                 if hashed_pass == hash_input:  
                     print(f'Your clear text hash is: [bold green][[/bold green] [bold white]{line.strip()}[/bold white] [bold red]][/bold red]')
                     exit(0)
+
     if __name__ == '__main__':
         parser = argparse.ArgumentParser(description="Hash cracker",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=textwrap.dedent("""AVAILABLE HASH(md5 is by default):
+AVAILABLE HASH:
+    [*] md5
+    [*] sha1    
+    [*] sha224
+    [*] sha256
+    [*] sha384
+    [*] sha512
 MD5 HASH Usage: python hashcrack.py -w <wordlist> -m md5 <hash>
 SHA1 HASH Usage: python hashcrack.py -w <wordlist> -m sha1 <hash>
 SHA224 HASH Usage: python hashcrack.py -w <wordlist> -m sha224 <hash>
 SHA384 HASH Usage: python hashcrack.py -w <wordlist> -m sha384 <hash>
-SHA512 HASH Usage: python hashcrack.py -w <wordlist> -m 512 <hash>"""))
+SHA512 HASH Usage: python hashcrack.py -w <wordlist> -m 512 <hash>
+"""))
         parser.add_argument("hash",help="Hash to crack")
         parser.add_argument('-w','--wordlist', help="wordlist to crack your hash")
         parser.add_argument('-m','--mode', default="md5",help="Select a type of hash (md5 is the deafult one so you don't need to specify it)")
-        parser.add_argument('-f','--file',help="Insert a hash file!")
         args = parser.parse_args()
         wordlist_location = args.wordlist
         hash_input = args.hash
         mode = args.mode
-        inp_file = args.file
+        
     t = datetime.now()
     ft = t.strftime("%H:%M:%S")
     print("""[bold green]
@@ -90,6 +99,7 @@ SHA512 HASH Usage: python hashcrack.py -w <wordlist> -m 512 <hash>"""))
     [bold white]| | | | (_| \__ \ | | | (__| | | (_| | (__|   < [/bold white]
     [bold red]|_| |_|\__,_|___/_| |_|\___|_|  \__,_|\___|_|\_\ [/bold red]
 """)
+
     print('-'*50)
     print(f"[!]Hash: {hash_input}")
     print(f"[!]Mode: {mode}")
@@ -108,8 +118,10 @@ SHA512 HASH Usage: python hashcrack.py -w <wordlist> -m 512 <hash>"""))
         hash_sha384()
     elif mode == "sha512":
         hash_sha512()
+    
     else:
-        print("Sorry but I can't decrypt this hash type :(")
-
+        print(f"Sorry but I can't decrypt this hash type [bold red][ {mode} ][/bold red] :(")
+#except TypeError:
+#    print("Missing wordlist")
 except KeyboardInterrupt:
     print("\nScript interrupted by user.")
