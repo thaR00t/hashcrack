@@ -1,8 +1,14 @@
 # Hashcrack
 
-This is a tool to crack MD5 and SHA hashes, it works on Linux and Windows too.
+This is a tool to crack MD5 and SHA hashes.
 
-Note: If you are using this tool on windows make sure that the wordlist is in the current directory of the file.
+You can run this script on:
+``
+Linux and
+Windows
+``
+
+Note: If you are using this tool on ``Windows`` make sure that the wordlist is in the current directory of the file.
 If you are on linux, you don't have any kind of problem.
 
 Installation:
