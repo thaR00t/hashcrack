@@ -9,11 +9,11 @@ sudo apt install -y python3-pip
 pip install -r requirements.txt
 
 #convert file for a linux enviroment
-tr -d '\r' < hashcrack.py > hashcrack_linux.py
+sudo tr -d '\r' < hashcrack.py > hashcrack_linux.py
 
 #create the binary
-chmod +x hashcrack_linux.py
-mv hashcrack_linux.py hashcrack
+sudo chmod +x hashcrack_linux.py
+sudo mv hashcrack_linux.py hashcrack
 sudo cp  hashcrack /usr/bin
 
 echo "Installation done."
