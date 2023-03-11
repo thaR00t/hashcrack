@@ -13,8 +13,16 @@ If you are on linux, you don't have any kind of problem.
 
 Installation:
 ```
-pip install -r requirements.txt
+chmod +x install.sh
+./install.sh
 ```
+
+Uninstallation:
+```
+chmod +x uninstall.sh
+./uninstall.sh
+```
+
 ![2022-10-02-23-59-45](https://user-images.githubusercontent.com/87804260/193478208-04d179ed-1868-4898-b32b-c5a3ead17fd8.gif)
 
 Usage
