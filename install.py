@@ -15,7 +15,7 @@ if __name__ == '__main__':
             system("apt install python3")
             system("apt install python-is-python3")
             system("pip install -r requirements.txt")
-            system("tr -d '\r' < hashcrack.py > hashcrack_linux.py")
+            system("tr -d '\r' < hashcrack.py > hashcrack.py")
             system("chmod +x hashcrack_linux.py")
             system("mv hashcrack_linux.py hashcrack")
             system("cp hashcrack /usr/bin")
