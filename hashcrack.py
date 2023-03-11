@@ -82,7 +82,7 @@ MD5 HASH Usage: python hashcrack.py -w <wordlist> -m md5 <hash>
 SHA1 HASH Usage: python hashcrack.py -w <wordlist> -m sha1 <hash>
 SHA224 HASH Usage: python hashcrack.py -w <wordlist> -m sha224 <hash>
 SHA384 HASH Usage: python hashcrack.py -w <wordlist> -m sha384 <hash>
-SHA512 HASH Usage: python hashcrack.py -w <wordlist> -m 512 <hash>
+SHA512 HASH Usage: python hashcrack.py -w <wordlist> -m sha512 <hash>
 """))
         parser.add_argument("hash",help="Hash to crack")
         parser.add_argument('-w','--wordlist', help="wordlist to crack your hash")
