@@ -16,7 +16,8 @@ sudo chmod +x hashcrack_linux.py
 sudo mv hashcrack_linux.py hashcrack
 sudo cp  hashcrack /usr/bin
 
+clear
+
 echo "Installation done."
 
 hashcrack --help
-
