@@ -1,2 +1,2 @@
-sudo rm /urs/bin/hashcrack
+sudo rm /usr/bin/hashcrack
 sudo rm hashcrack
